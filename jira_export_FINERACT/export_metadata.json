@@ -1,0 +1,14 @@
+{
+  "exportedAtUtc": "2026-03-27T12:46:44.689288+00:00",
+  "baseUrl": "https://issues.apache.org/jira",
+  "projectKey": "FINERACT",
+  "jql": "project = FINERACT ORDER BY key",
+  "pageSize": 100,
+  "totalIssues": 2541,
+  "pagesFetched": 26,
+  "files": {
+    "fieldsCatalog": "C:\\Users\\RichardSharpMBE\\source\\repos\\rpsharpmbe\\NDR-AI-POC\\jira_export_FINERACT\\fields_catalog.json",
+    "issuesRawNdjson": "C:\\Users\\RichardSharpMBE\\source\\repos\\rpsharpmbe\\NDR-AI-POC\\jira_export_FINERACT\\issues_raw.ndjson",
+    "issuesAiSearchNdjson": "C:\\Users\\RichardSharpMBE\\source\\repos\\rpsharpmbe\\NDR-AI-POC\\jira_export_FINERACT\\issues_ai_search.ndjson"
+  }
+}
