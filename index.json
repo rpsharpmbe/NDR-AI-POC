@@ -1,0 +1,320 @@
+{
+  "name": "jira-issues-v1",
+  "fields": [
+    {
+      "name": "id",
+      "type": "Edm.String",
+      "key": true,
+      "searchable": false,
+      "filterable": true,
+      "sortable": true,
+      "facetable": false,
+      "retrievable": true
+    },
+    {
+      "name": "key",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "sortable": true,
+      "facetable": false,
+      "retrievable": true
+    },
+    {
+      "name": "self",
+      "type": "Edm.String",
+      "searchable": false,
+      "filterable": false,
+      "sortable": false,
+      "facetable": false,
+      "retrievable": true
+    },
+    {
+      "name": "project",
+      "type": "Edm.ComplexType",
+      "fields": [
+        {
+          "name": "key",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "sortable": true,
+          "facetable": true,
+          "retrievable": true
+        },
+        {
+          "name": "name",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "sortable": true,
+          "facetable": true,
+          "retrievable": true
+        }
+      ]
+    },
+    {
+      "name": "issueType",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "sortable": true,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "status",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "sortable": true,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "resolution",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "sortable": true,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "priority",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "sortable": true,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "reporter",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "sortable": true,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "assignee",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "sortable": true,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "creator",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "sortable": true,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "summary",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": false,
+      "sortable": false,
+      "facetable": false,
+      "retrievable": true
+    },
+    {
+      "name": "description",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": false,
+      "sortable": false,
+      "facetable": false,
+      "retrievable": true
+    },
+    {
+      "name": "environment",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": false,
+      "sortable": false,
+      "facetable": false,
+      "retrievable": true
+    },
+    {
+      "name": "labels",
+      "type": "Collection(Edm.String)",
+      "searchable": true,
+      "filterable": true,
+      "sortable": false,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "components",
+      "type": "Collection(Edm.String)",
+      "searchable": true,
+      "filterable": true,
+      "sortable": false,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "fixVersions",
+      "type": "Collection(Edm.String)",
+      "searchable": true,
+      "filterable": true,
+      "sortable": false,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "affectsVersions",
+      "type": "Collection(Edm.String)",
+      "searchable": true,
+      "filterable": true,
+      "sortable": false,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "created",
+      "type": "Edm.DateTimeOffset",
+      "searchable": false,
+      "filterable": true,
+      "sortable": false,
+      "facetable": false,
+      "retrievable": true
+    },
+    {
+      "name": "updated",
+      "type": "Edm.DateTimeOffset",
+      "searchable": false,
+      "filterable": true,
+      "sortable": false,
+      "facetable": false,
+      "retrievable": true
+    },
+    {
+      "name": "resolved",
+      "type": "Edm.DateTimeOffset",
+      "searchable": false,
+      "filterable": true,
+      "sortable": false,
+      "facetable": false,
+      "retrievable": true
+    },
+    {
+      "name": "comments",
+      "type": "Collection(Edm.ComplexType)",
+      "fields": [
+        {
+          "name": "id",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": false,
+          "sortable": false,
+          "facetable": false,
+          "retrievable": true
+        },
+        {
+          "name": "author",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "sortable": false,
+          "facetable": true,
+          "retrievable": true
+        },
+        {
+          "name": "body",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": false,
+          "sortable": false,
+          "facetable": false,
+          "retrievable": true
+        },
+        {
+          "name": "created",
+          "type": "Edm.DateTimeOffset",
+          "searchable": false,
+          "filterable": true,
+          "sortable": false,
+          "facetable": false,
+          "retrievable": true
+        },
+        {
+          "name": "updated",
+          "type": "Edm.DateTimeOffset",
+          "searchable": false,
+          "filterable": true,
+          "sortable": false,
+          "facetable": false,
+          "retrievable": true
+        }
+      ]
+    },
+    {
+      "name": "voteCount",
+      "type": "Edm.Int32",
+      "searchable": false,
+      "filterable": true,
+      "sortable": true,
+      "facetable": false,
+      "retrievable": true
+    },
+    {
+      "name": "watchCount",
+      "type": "Edm.Int32",
+      "searchable": false,
+      "filterable": true,
+      "sortable": true,
+      "facetable": false,
+      "retrievable": true
+    }
+  ],
+  "semantic": {
+    "defaultConfiguration": "jira-semantic",
+    "configurations": [
+      {
+        "name": "jira-semantic",
+        "prioritizedFields": {
+          "titleField": {
+            "fieldName": "summary"
+          },
+          "prioritizedContentFields": [
+            {
+              "fieldName": "description"
+            },
+            {
+              "fieldName": "environment"
+            }
+          ],
+          "prioritizedKeywordsFields": [
+            {
+              "fieldName": "key"
+            },
+            {
+              "fieldName": "issueType"
+            },
+            {
+              "fieldName": "status"
+            },
+            {
+              "fieldName": "priority"
+            },
+            {
+              "fieldName": "labels"
+            },
+            {
+              "fieldName": "components"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
