@@ -1,5 +1,5 @@
 {
-  "name": "jira-issues-v1",
+  "name": "jira-issues-v2",
   "fields": [
     {
       "name": "id",
@@ -30,206 +30,29 @@
       "retrievable": true
     },
     {
-      "name": "project",
+      "name": "fields",
       "type": "Edm.ComplexType",
       "fields": [
         {
-          "name": "key",
+          "name": "summary",
           "type": "Edm.String",
           "searchable": true,
-          "filterable": true,
-          "sortable": true,
-          "facetable": true,
-          "retrievable": true
-        },
-        {
-          "name": "name",
-          "type": "Edm.String",
-          "searchable": true,
-          "filterable": true,
-          "sortable": true,
-          "facetable": true,
-          "retrievable": true
-        }
-      ]
-    },
-    {
-      "name": "issueType",
-      "type": "Edm.String",
-      "searchable": true,
-      "filterable": true,
-      "sortable": true,
-      "facetable": true,
-      "retrievable": true
-    },
-    {
-      "name": "status",
-      "type": "Edm.String",
-      "searchable": true,
-      "filterable": true,
-      "sortable": true,
-      "facetable": true,
-      "retrievable": true
-    },
-    {
-      "name": "resolution",
-      "type": "Edm.String",
-      "searchable": true,
-      "filterable": true,
-      "sortable": true,
-      "facetable": true,
-      "retrievable": true
-    },
-    {
-      "name": "priority",
-      "type": "Edm.String",
-      "searchable": true,
-      "filterable": true,
-      "sortable": true,
-      "facetable": true,
-      "retrievable": true
-    },
-    {
-      "name": "reporter",
-      "type": "Edm.String",
-      "searchable": true,
-      "filterable": true,
-      "sortable": true,
-      "facetable": true,
-      "retrievable": true
-    },
-    {
-      "name": "assignee",
-      "type": "Edm.String",
-      "searchable": true,
-      "filterable": true,
-      "sortable": true,
-      "facetable": true,
-      "retrievable": true
-    },
-    {
-      "name": "creator",
-      "type": "Edm.String",
-      "searchable": true,
-      "filterable": true,
-      "sortable": true,
-      "facetable": true,
-      "retrievable": true
-    },
-    {
-      "name": "summary",
-      "type": "Edm.String",
-      "searchable": true,
-      "filterable": false,
-      "sortable": false,
-      "facetable": false,
-      "retrievable": true
-    },
-    {
-      "name": "description",
-      "type": "Edm.String",
-      "searchable": true,
-      "filterable": false,
-      "sortable": false,
-      "facetable": false,
-      "retrievable": true
-    },
-    {
-      "name": "environment",
-      "type": "Edm.String",
-      "searchable": true,
-      "filterable": false,
-      "sortable": false,
-      "facetable": false,
-      "retrievable": true
-    },
-    {
-      "name": "labels",
-      "type": "Collection(Edm.String)",
-      "searchable": true,
-      "filterable": true,
-      "sortable": false,
-      "facetable": true,
-      "retrievable": true
-    },
-    {
-      "name": "components",
-      "type": "Collection(Edm.String)",
-      "searchable": true,
-      "filterable": true,
-      "sortable": false,
-      "facetable": true,
-      "retrievable": true
-    },
-    {
-      "name": "fixVersions",
-      "type": "Collection(Edm.String)",
-      "searchable": true,
-      "filterable": true,
-      "sortable": false,
-      "facetable": true,
-      "retrievable": true
-    },
-    {
-      "name": "affectsVersions",
-      "type": "Collection(Edm.String)",
-      "searchable": true,
-      "filterable": true,
-      "sortable": false,
-      "facetable": true,
-      "retrievable": true
-    },
-    {
-      "name": "created",
-      "type": "Edm.DateTimeOffset",
-      "searchable": false,
-      "filterable": true,
-      "sortable": false,
-      "facetable": false,
-      "retrievable": true
-    },
-    {
-      "name": "updated",
-      "type": "Edm.DateTimeOffset",
-      "searchable": false,
-      "filterable": true,
-      "sortable": false,
-      "facetable": false,
-      "retrievable": true
-    },
-    {
-      "name": "resolved",
-      "type": "Edm.DateTimeOffset",
-      "searchable": false,
-      "filterable": true,
-      "sortable": false,
-      "facetable": false,
-      "retrievable": true
-    },
-    {
-      "name": "comments",
-      "type": "Collection(Edm.ComplexType)",
-      "fields": [
-        {
-          "name": "id",
-          "type": "Edm.String",
-          "searchable": false,
           "filterable": false,
           "sortable": false,
           "facetable": false,
           "retrievable": true
         },
         {
-          "name": "author",
+          "name": "description",
           "type": "Edm.String",
           "searchable": true,
-          "filterable": true,
+          "filterable": false,
           "sortable": false,
-          "facetable": true,
+          "facetable": false,
           "retrievable": true
         },
         {
-          "name": "body",
+          "name": "environment",
           "type": "Edm.String",
           "searchable": true,
           "filterable": false,
@@ -254,67 +77,320 @@
           "sortable": false,
           "facetable": false,
           "retrievable": true
-        }
-      ]
-    },
-    {
-      "name": "voteCount",
-      "type": "Edm.Int32",
-      "searchable": false,
-      "filterable": true,
-      "sortable": true,
-      "facetable": false,
-      "retrievable": true
-    },
-    {
-      "name": "watchCount",
-      "type": "Edm.Int32",
-      "searchable": false,
-      "filterable": true,
-      "sortable": true,
-      "facetable": false,
-      "retrievable": true
-    }
-  ],
-  "semantic": {
-    "defaultConfiguration": "jira-semantic",
-    "configurations": [
-      {
-        "name": "jira-semantic",
-        "prioritizedFields": {
-          "titleField": {
-            "fieldName": "summary"
-          },
-          "prioritizedContentFields": [
+        },
+        {
+          "name": "resolutiondate",
+          "type": "Edm.DateTimeOffset",
+          "searchable": false,
+          "filterable": true,
+          "sortable": false,
+          "facetable": false,
+          "retrievable": true
+        },
+        {
+          "name": "labels",
+          "type": "Collection(Edm.String)",
+          "searchable": true,
+          "filterable": true,
+          "sortable": false,
+          "facetable": true,
+          "retrievable": true
+        },
+        {
+          "name": "project",
+          "type": "Edm.ComplexType",
+          "fields": [
             {
-              "fieldName": "description"
+              "name": "key",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "sortable": true,
+              "facetable": true,
+              "retrievable": true
             },
             {
-              "fieldName": "environment"
+              "name": "name",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "sortable": true,
+              "facetable": true,
+              "retrievable": true
             }
-          ],
-          "prioritizedKeywordsFields": [
+          ]
+        },
+        {
+          "name": "issuetype",
+          "type": "Edm.ComplexType",
+          "fields": [
             {
-              "fieldName": "key"
+              "name": "name",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "sortable": true,
+              "facetable": true,
+              "retrievable": true
+            }
+          ]
+        },
+        {
+          "name": "status",
+          "type": "Edm.ComplexType",
+          "fields": [
+            {
+              "name": "name",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "sortable": true,
+              "facetable": true,
+              "retrievable": true
+            }
+          ]
+        },
+        {
+          "name": "resolution",
+          "type": "Edm.ComplexType",
+          "fields": [
+            {
+              "name": "name",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "sortable": true,
+              "facetable": true,
+              "retrievable": true
+            }
+          ]
+        },
+        {
+          "name": "priority",
+          "type": "Edm.ComplexType",
+          "fields": [
+            {
+              "name": "name",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "sortable": true,
+              "facetable": true,
+              "retrievable": true
+            }
+          ]
+        },
+        {
+          "name": "reporter",
+          "type": "Edm.ComplexType",
+          "fields": [
+            {
+              "name": "displayName",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "sortable": true,
+              "facetable": true,
+              "retrievable": true
+            }
+          ]
+        },
+        {
+          "name": "assignee",
+          "type": "Edm.ComplexType",
+          "fields": [
+            {
+              "name": "displayName",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "sortable": true,
+              "facetable": true,
+              "retrievable": true
+            }
+          ]
+        },
+        {
+          "name": "creator",
+          "type": "Edm.ComplexType",
+          "fields": [
+            {
+              "name": "displayName",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "sortable": true,
+              "facetable": true,
+              "retrievable": true
+            }
+          ]
+        },
+        {
+          "name": "components",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "name",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "sortable": false,
+              "facetable": true,
+              "retrievable": true
+            }
+          ]
+        },
+        {
+          "name": "fixVersions",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "name",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "sortable": false,
+              "facetable": true,
+              "retrievable": true
+            }
+          ]
+        },
+        {
+          "name": "versions",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "name",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "sortable": false,
+              "facetable": true,
+              "retrievable": true
+            }
+          ]
+        },
+        {
+          "name": "comment",
+          "type": "Edm.ComplexType",
+          "fields": [
+            {
+              "name": "total",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": true,
+              "sortable": true,
+              "facetable": false,
+              "retrievable": true
             },
             {
-              "fieldName": "issueType"
+              "name": "maxResults",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": false,
+              "sortable": false,
+              "facetable": false,
+              "retrievable": true
             },
             {
-              "fieldName": "status"
+              "name": "startAt",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": false,
+              "sortable": false,
+              "facetable": false,
+              "retrievable": true
             },
             {
-              "fieldName": "priority"
-            },
+              "name": "comments",
+              "type": "Collection(Edm.ComplexType)",
+              "fields": [
+                {
+                  "name": "id",
+                  "type": "Edm.String",
+                  "searchable": false,
+                  "filterable": false,
+                  "sortable": false,
+                  "facetable": false,
+                  "retrievable": true
+                },
+                {
+                  "name": "body",
+                  "type": "Edm.String",
+                  "searchable": true,
+                  "filterable": false,
+                  "sortable": false,
+                  "facetable": false,
+                  "retrievable": true
+                },
+                {
+                  "name": "created",
+                  "type": "Edm.DateTimeOffset",
+                  "searchable": false,
+                  "filterable": true,
+                  "sortable": false,
+                  "facetable": false,
+                  "retrievable": true
+                },
+                {
+                  "name": "updated",
+                  "type": "Edm.DateTimeOffset",
+                  "searchable": false,
+                  "filterable": true,
+                  "sortable": false,
+                  "facetable": false,
+                  "retrievable": true
+                },
+                {
+                  "name": "author",
+                  "type": "Edm.ComplexType",
+                  "fields": [
+                    {
+                      "name": "displayName",
+                      "type": "Edm.String",
+                      "searchable": true,
+                      "filterable": true,
+                      "sortable": false,
+                      "facetable": true,
+                      "retrievable": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "votes",
+          "type": "Edm.ComplexType",
+          "fields": [
             {
-              "fieldName": "labels"
-            },
+              "name": "votes",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": true,
+              "sortable": true,
+              "facetable": false,
+              "retrievable": true
+            }
+          ]
+        },
+        {
+          "name": "watches",
+          "type": "Edm.ComplexType",
+          "fields": [
             {
-              "fieldName": "components"
+              "name": "watchCount",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": true,
+              "sortable": true,
+              "facetable": false,
+              "retrievable": true
             }
           ]
         }
-      }
-    ]
-  }
+      ]
+    }
+  ]
 }
